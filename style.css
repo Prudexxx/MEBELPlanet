@@ -1,0 +1,980 @@
+/* стили для оплатыыыыыыыыыыыыыы */
+  /* Стиль блока */
+  .block {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+    max-width: 600px;
+    margin: 10px auto;
+        
+  }
+
+  /* Заголовок блока */
+  .block-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #5f5f5f;
+
+    /* Для адаптивности: при узких экранах меняем направление */
+    flex-wrap: nowrap; /* убираем перенос */
+    position: relative; /* для позиционирования крестика */
+  }
+
+  /* Иконка слева */
+  .icon {
+    flex: 0 0 auto; /* не растягиваемся */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 25%;
+  }
+
+  .icon img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Текст по центру, с учетом справа фиксированного крестика */
+  .title {
+    flex: 1 1 1;
+    text-align: center;
+
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 0 50px; /* оставить место для крестика справа */
+    min-width: 100px;
+  }
+
+  /* Крестик всегда справа, фиксировано */
+  .close-icon {
+    position: absolute;
+    right: 15px; /* справа от блока */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+    z-index: 10; /* чтобы было сверху всех */
+  }
+
+  /* Вращение крестика */
+  .rotate {
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  /* Блок содержимого */
+  .info {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, padding 1s ease;
+    padding: 0 15px;
+  }
+
+  /* При открытии */
+  .info.show {
+    max-height: 2000px;
+    padding: 15px;
+  }
+
+  /* Медиазапрос для узких устройств: можно чуть изменить, если нужно */
+  @media (max-width: 400px) {
+    .block-header {
+      flex-direction: row; /* оставить горизонтальный, крестик всегда справа */
+    }
+    .title {
+        text-align: left;
+        font-size: 0.7em;
+      padding-right: 50px; /* оставить место для крестика */
+    }
+  }
+
+/* Стили для главной ======================================================================*/
+.video-container {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+  }
+.kupon{
+    display:flex ; justify-content: space-between;
+     width: 100%;
+}
+
+
+.kupon img {
+     width: 100%;
+  max-width: 500px; /* такая же ширина, как у видео */
+  /* Можно добавить стили для центрирования или рамки */
+
+}
+  video{
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  
+    background-color: rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    pointer-events: none;
+  }
+  .map-container {
+  /* max-width: 600px; или любой нужный вам максимум */
+  margin: 0 auto; /* центрирование */
+}
+
+/* Товары по акции============================================================================= */
+
+/* Стиль модального окна */
+  .product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  .product-card {
+    background: #fff;
+    border-radius: 8px;
+    width: 350px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    /* Убираем фиксированную высоту, чтобы описание могло быть короче или длиннее */
+  }
+  /* слайдер внутри карточки */
+  .card-slider {
+    position: relative;
+    width: 100%;
+    /* Увеличим высоту для большего изображения */
+    height: 50vh; /* 50% высоты viewport, чтобы было адаптивно */
+    max-height: 300px; /* максимум для больших экранов */
+    overflow: hidden;
+  }
+  .slides {
+    display: flex;
+    transition: transform 0.3s ease;
+    height: 100%;
+  }
+  .slide {
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .slide img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  /* стрелки внутри карточки */
+  .nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.3);
+    color: #fff;
+    font-size: 1.5em;
+    padding: 5px 10px;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 50%;
+    z-index: 10;
+  }
+  .nav-prev {
+    left: 10px;
+  }
+  .nav-next {
+    right: 10px;
+  }
+  /* информация о товаре */
+  .card-info {
+    padding: 10px 15px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .product-title {
+    margin: 0 0 5px 0;
+    font-size: 1.2em;
+  }
+  .product-price {
+    margin: 0;
+    color: #555;
+    font-size: 1em;
+  }
+  /* описание — добавим больше места и уменьшение размера текста */
+  .product-desc {
+    margin-top: 8px;
+    font-size: 0.9em;
+    color: #333;
+  }
+
+  /* модальное окно */
+  #modal {
+    display: none;
+    position: fixed;
+    top:0; left:0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  #modal img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 8px;
+  }
+  /* стрелки в модалке */
+  .modal-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2em;
+    color: #fff;
+    background: rgba(0,0,0,0.3);
+    padding: 10px;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 50%;
+  }
+  #modal-prev {
+    left: 20px;
+  }
+  #modal-next {
+    right: 20px;
+  }
+  /* закрытие модалки */
+  #close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2em;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  /* Адаптивность: для маленьких экранов */
+  @media(max-width: 400px) {
+    .card-slider {
+      height: 40vh; /* чуть меньше для маленьких устройств */
+    }
+  } 
+
+  /* ОПЛАТААААаааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааа */
+  /* Основной контейнер */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media(max-width: 768px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Блок */
+.info-block {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* Заголовок блока */
+.block-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+/* Иконка */
+.icon {
+  font-size: 24px;
+}
+
+/* Надпись */
+.label {
+  font-weight: bold;
+  font-size: 16px;
+  padding: 5px 10px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Информация, которая выдвигается снизу */
+.block-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  margin-top: 10px;
+  font-size: 14px;
+  background-color: #e0e0e0;
+  padding: 0 10px;
+  border-radius: 4px;
+}
+
+/* Активный класс для раскрытия */
+.expanded {
+  max-height: 200px; /* достаточно, чтобы вместить содержимое */
+  padding: 10px;
+}
+
+
+*,
+        *::before,
+        *::after {
+            padding: 0;
+            margin: 0;
+            border: 0;
+            box-sizing: border-box;
+        }
+        
+        a {
+            text-decoration: none;
+            font-size: 1.5lh ;
+        }
+        
+        b {
+            font-size: 30px;
+        }
+        
+        ul,
+        ol,
+        li {
+            list-style: none;
+        }
+        
+        img {
+            vertical-align: top;
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: inherit;
+            font-size: inherit;
+        }
+        
+        /* Основные стили */
+        html,
+        body {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            line-height: 1;
+            font-size: 23px;
+            background-color: #232731;
+            color: #cfcfcf; /* Основной цвет текста */
+            height: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        
+        body._lock {
+            overflow: hidden;
+        }
+        
+        .wrapper {
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .page {
+            padding-top: 0px; /* Отступ сверху для хедера */
+            margin: 0 auto;
+            flex-grow: 1; /* Позволяет main занимать все доступное пространство */
+            max-width: 1500px; /* Ограничиваем максимальную ширину контента */
+            width: 100%; /* Гарантируем, что контент занимает всю доступную ширину */
+            padding: 90px 20px 20px 20px; /* Отступы вокруг контента */
+    }
+        
+        .page__title {
+            font-size: 40px;
+        }
+            
+        .page__text p {
+            margin: 0;
+            text-align: justify; /* Выравнивание текста */
+            margin-bottom: 20px; /* Отступ между абзацами */
+        }
+        
+        .page__sub-title {
+            font-size: 30px;
+            font-weight: bolder;
+            margin-bottom: 10px ;
+            /* Цвет подзаголовков */
+        }
+        
+        /* Стили хедера */
+        .header {
+            position: fixed;
+            margin: 0px;
+            top: 0;
+            left: 0; /* Добавляем left: 0 для корректного позиционирования */
+            width: 100%;
+            z-index: 10;
+            opacity: 0.9;
+            background-color: #1d1e30; /* Фон хедера */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Тень */
+        }
+        
+        .header__container {
+            max-width: 1500px;
+            margin: 0 auto;
+            display: flex;
+            padding: 0 30px;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 70px;
+        }
+        
+        .header__logo img {
+            color: #711f1f;
+            position: relative;
+            z-index: 5;
+            width: 40px;
+            height: 40px;
+            font-weight: bolder;
+            display: flex; /* Используем flexbox для центрирования текста внутри лого */
+            justify-content: center;
+            align-items: center;
+        }
+        
+        
+        /* Стили меню */
+        .menu__list {
+            display: flex;
+            align-items: center;
+            
+        }
+        
+        .menu__list > li {
+            margin: 0 15px; /* Отступ между пунктами меню */
+            position: relative;
+            
+
+        }
+        
+        .menu__link {
+            color: #3375f0;
+            font-size: 10px;
+            padding: 10px;
+            transition: text-decoration 0.3s ease;
+        }
+        
+        .menu__link:hover {
+            text-decoration: underline;
+            text-decoration-color: #1794fa;
+           
+        }
+        
+        .menu__arrow {
+            display: none; /* Стрелка не нужна в этом варианте меню */
+        }
+        
+        /*-------------------------------------------------------------------*/
+        /* Стили для бургер-иконки */
+        .menu__icon {
+            z-index: 5;
+            display: none; /* Скрываем по умолчанию */
+            position: relative;
+            width: 30px;
+            height: 18px;
+            cursor: pointer;
+        }
+        
+        .menu__icon span,
+        .menu__icon::before,
+        .menu__icon::after {
+            font-size: 30px;
+            left: 0;
+            position: absolute;
+            height: 10%;
+            width: 100%;
+            transition: all 0.3s ease 0s;
+            background-color: #3b87e9;
+        }
+        
+        .menu__icon::before,
+        .menu__icon::after {
+            content: "";
+        }
+        
+        .menu__icon::before {
+            top: 0;
+        }
+        
+        .menu__icon::after {
+            bottom: 0;
+        }
+        
+        .menu__icon span {
+            top: 50%;
+            transform: scale(1) translate(0, -50%);
+        }
+        
+        .menu__icon._active span {
+            transform: scale(0) translate(0, -50%);
+        }
+        
+        .menu__icon._active::before {
+            top: 50%;
+            transform: rotate(-45deg) translate(0, -50%);
+        }
+        
+        .menu__icon._active::after {
+            bottom: 50%;
+            transform: rotate(45deg) translate(0, 50%);
+        }
+        
+        /* Стили для мобильного меню */
+        .menu__body {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 100px 30px 30px 30px;
+            transition: left 0.3s ease 0s;
+            overflow: auto;
+            display: flex; /* Используем flexbox для центрирования пунктов меню */
+            justify-content: center; /* Центрируем по горизонтали */
+            align-items: center; /* Центрируем по вертикали */
+        }
+        
+        .menu__body._active {
+            left: 0;
+        }
+        
+        .menu__list {
+            flex-direction: column; /* Располагаем пункты меню вертикально на мобильных */
+            width: 100%; /* Пункты меню занимают всю ширину */
+        }
+        
+        .menu__list > li {
+            margin: 20px 0; /* Увеличиваем вертикальные отступы */
+        }
+        
+        
+   
+        
+        /* Стили для секций контента */
+        .page__section {
+            margin-bottom: 50px; /* Отступ между секциями */
+            padding: 20px;
+            background-color: #2f16aa; /* Темный фон для секций */
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(172, 66, 66, 0.3);
+            text-align: center; /* Центрируем текст внутри секций */
+        }
+        
+        .page__section p {
+            text-align: center; /* Центрируем абзацы внутри секций */
+        }
+        
+        
+        /* Стили для иконки телефона */
+        .icons {
+            margin-bottom: 0; /* Убираем лишний нижний отступ */
+            margin-top: 0; /* Убираем лишний верхний отступ */
+            font-size: 30px; /* Уменьшаем размер иконки в меню */
+            color: #711f1f;
+            padding: 10px; /* Добавляем отступы для удобства клика */
+        }
+        
+        
+        /* Стили для карты */
+        .karta {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            
+        }
+        
+        .karta iframe { /* Стили для iframe с картой */
+            width: 100%;
+            max-width: 1000px;
+            height: 500px;
+            border: 2px solid #000;
+            border-radius: 15px;
+        }
+        /* Добавьте этот стиль */
+.page__section {
+    display: none; /* Скрываем все секции по умолчанию */
+    margin-bottom: 50px; /* Отступ между секциями */
+    padding: 20px;
+    background-color: #2b304b; /* Темный фон для секций */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: center; /* Центрируем текст внутри секций */
+}
+
+/* Остальные стили для .page__section остаются без изменений */
+.page__section p {
+    text-align: center; /* Центрируем абзацы внутри секций */
+}
+
+.raduga{
+    border: 1px solid #fff;
+    padding-bottom: 20px;
+}
+.raduga1 { 
+   
+    text-decoration:underline;
+}
+
+#committeeSelect, #committeeSelect1, #committeeSelect2 {
+  font-size: 20px;
+    padding: 10px 20px;
+  
+}
+/* Убедитесь, что нет других стилей, которые могут переопределить display: none */
+        /* Медиа-запросы */
+        @media (min-width: 768px) {
+            .menu__icon {
+                display: none; /* Скрываем иконку на широких экранах */
+            }
+        
+            .menu__body {
+                position: static; /* Сбрасываем позиционирование */
+                left: auto;
+                width: auto;
+                height: auto;
+                background-color: transparent;
+                padding: 0;
+                overflow: visible;
+                display: flex; /* Возвращаем flexbox для горизонтального меню */
+                justify-content: flex-end; /* Выравниваем по правому краю */
+                align-items: center;
+            }
+        
+            .menu__list {
+                flex-direction: row; /* Располагаем пункты меню горизонтально */
+                width: auto;
+            }
+        
+            .menu__list > li {
+                margin: 0 15px; /* Отступ между пунктами меню */
+            }
+        
+            .menu__link {
+                font-size: 15px;
+                color: #1b6aff; /* Цвет текста на широких экранах */
+                padding: 10px;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            body {
+                box-sizing: border-box;
+            }
+
+            .kupon{
+                display: block;
+            }
+
+          
+        
+            .menu__icon {
+                display: block; /* Показываем иконку на мобильных */
+            }
+        
+            .page {
+                padding: 90px 15px 15px 15px; /* Уменьшаем отступы на мобильных */
+            }
+        
+            .page__section {
+                padding: 15px;
+            }
+        
+            .page__sub-title {
+                font-size: 24px;
+            }
+        
+            .menu__body._active::before {
+                 /* Убираем псевдоэлемент, если он не нужен */
+                 display: none;
+            }
+        
+            .menu__link {
+                font-size: 25px;}
+            .karta iframe {
+             
+              height: 300px; /* Уменьшаем высоту карты на мобильных */
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .page {
+                padding: 80px 10px 10px 10px;
+            }
+        
+            .page__sub-title {
+                font-size: 20px;
+            }
+        
+            .menu__icon {
+                width: 35px;
+                height: 25px;
+              
+            }
+        
+            .menu__icon .bar {
+                margin: 4px 0;
+            }
+        
+            .menu__body {
+                padding: 80px 15px 15px 15px;
+            }
+        
+            .menu__list > li {
+                margin: 15px 0;
+            }
+        
+            .menu__link {
+                font-size: 20px;
+                color: #1794fa;
+            }
+        }
+
+
+/* CCCCCCCCCCCCCCCCCCCCCCCCCCCCClllllllllllaaaaaaaaaaaaaaaaaaiiiiiiiidddddddddddderrrrrrrrrrrrrrrrr */
+
+/* Остальной CSS код без изменений */
+
+/* Стили для слайдера */
+/*  */
+
+/* Анимацияяяяяяяяяяяяяяяяяяяяяяяяяяя */
+/* Preloader Styles */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0); /* Transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure it's on top of everything */
+    pointer-events: none; /* Allow interaction with elements below */
+}
+
+#preloader img {
+    width: 0; /* Start with zero width */
+    height: auto;
+    opacity: 0; /* Start fully transparent */
+    animation: growAndFade 5s ease-in-out forwards; /* Apply the animation */
+}
+.komit {
+    /* Optional: Basic styling for the link */
+    font-size: 16px; /* Пример размера шрифта */
+    color: #1b72f5; /* Пример цвета текста */
+    text-decoration: none; /* Убираем подчеркивание */
+
+    /* Flexbox method (Recommended) */
+    display: inline-flex;
+    align-items: center;
+}
+
+.komit img {
+    /* Optional: Adjust image size if needed */
+    height: 60px; /* Пример высоты изображения */
+    width: auto; /* Сохраняем пропорции */
+
+    /* Add space between text and image */
+    margin-left: 5px;
+
+    /* Vertical-align method (Alternative) */
+    /* vertical-align: middle; */
+}
+/* Animation Keyframes */
+@keyframes growAndFade {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+    50% {
+        width: 300px; /* Adjust the maximum size as needed */
+        opacity: 1;
+    }
+    100% {
+        width: 500px; /* Adjust the final size as needed */
+        opacity: 0;
+    }
+}
+/* анимация текста */
+
+.gradient {
+  font-size: 80%;
+    background: linear-gradient(to right, #4b4a4a, #868686, #b3b3b3, #d4d4d4, #e7e7e7, hsl(0, 0%, 99%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: color-shift 5s infinite linear; /* Изменяем название анимации и время */
+  }
+
+  @keyframes color-shift {
+    0% {
+      background: linear-gradient(to right, #696969, #868686, #b3b3b3, #d4d4d4, #e7e7e7, #f8f8f8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    16.66% {
+      background: linear-gradient(to right, #bebdbd, #868686, #a1a1a1, #5e5d5d, #424242, #f8f8f8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    33.32% {
+      background: linear-gradient(to right, #7c7c7c, #868686, #b3b3b3, #d4d4d4, #e7e7e7, #f8f8f8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    49.98% {
+      background: linear-gradient(to right, #bebdbd, #868686, #a1a1a1, #818181, #807f7f, #f8f8f8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    66.64% {
+      background: linear-gradient(to right, #818181, #868686, #b3b3b3, #d4d4d4, #e7e7e7, #f8f8f88f);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    83.3% {
+      background: linear-gradient(to right,#bebdbd, #868686, #a1a1a1, #888888, #797979, #f8f8f8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    100% {
+      background: linear-gradient(to right, #808080, #868686, #b3b3b3, #d4d4d4, #e7e7e7, #f8f8f8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+  
+.slug{
+    font-size: 30px;
+}
+  /* Опция подкомитетов */
+  .committee-info {
+    display: none; /* Скрываем все блоки по умолчанию */
+    font-size: 20px;
+}
+.committee-info.active {
+    display: block; /* Отображаем активный блок */
+    font-size: 20px;
+}
+
+/* ---------------------------------группы, собрания-------------------- */
+.hidden {
+    display: none;
+}
+
+.slider-container1 {
+    text-align: center;
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.slider-display {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #007bff;
+}
+
+.slider-buttons button {
+    padding: 10px 15px;
+    margin: 0 5px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: rgb(5, 5, 5);
+    transition: background-color 0.3s ease;
+}
+
+.slider-buttons button:hover {
+    background-color: #0056b3;
+}
+
+.raions {
+    margin-top: 20px; /* Added some space above the raions list */
+}
+
+.raions p {
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    text-align: left;
+    background-color: #1f1f1f; /* Added a light background */
+}
+option{
+    font-size: 15px;
+    padding: 10px;
+}
+#raionSelect{
+    padding: 10px;
+}
+
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .menu__icon {
+margin-right: 30px;
+    /* Ваши существующие стили */
+    /* ... */
+    animation: pulse 3s infinite;
+  }
+
+#todayDescription {
+  font-size: 22px; /* начальный размер */
+  height: auto; /* или подходящее значение */
+  overflow: auto; /* или hidden, если нужно скрывать лишний текст */
+    max-width: 100%; /* чтобы не выходить за границы контейнера */
+  word-wrap: break-word; /* переносить длинные слова */
+  word-break: break-word; /* более надежный перенос длинных слов */
+  overflow-wrap: break-word; /* современный аналог */
+  box-sizing: border-box; /* чтобы padding и border учитывались */
+}
+
+  /* Медиазапрос для узких устройств: можно чуть изменить, если нужно */

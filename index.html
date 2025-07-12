@@ -1,0 +1,2185 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="https://prudexxx.github.io/NA/Снимок(1).png"/>
+    <link rel="stylesheet" href="form.css">
+  
+    <link rel="stylesheet" href="style.css">
+    <!-- Добавьте ссылку на Font Awesome для иконки телефона, если используете ее -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Мебель честная цена</title>
+</head>
+<body>
+<!--  ФОРМА-->
+
+     <div class="stars-bg"></div>
+    
+    <div class="side-menu">
+        <button class="menu-btn" id="contact-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            Заявка
+        </button>
+        <button class="menu-btn" id="telegram-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21.2 2.8c-2-2-11.8-3.3-17.1 2.1S.8 19.2 2.8 21.2c1.4 1.4 4.1 1.7 6.7.8 1.1-.4 4.9-2.1 6.4-3.6 1.5-1.5 3.2-5.3 3.6-6.4.9-2.6.6-5.3-.9-6.8z"></path>
+                <path d="M9.5 14.5l-3-2.2"></path>
+                <path d="M9.5 9.5l5 3.5"></path>
+                <path d="M17.5 7.5l-4 3"></path>
+            </svg>
+            Telegram
+        </button>
+        <button class="menu-btn" id="whatsapp-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21.5 2.5c-1.9-1.9-11.2-3.5-16.5 1.8S.6 19.6 2.5 21.5c1.3 1.3 4.1 1.5 6.7.6 1.1-.4 4.9-2.1 6.4-3.6 1.5-1.5 3.2-5.3 3.6-6.4.9-2.6.7-5.4-.7-6.6z"></path>
+                <path d="M7 8l2-2"></path>
+                <path d="M16 12l1-1"></path>
+                <path d="M13 15l2-2"></path>
+            </svg>
+            WhatsApp
+        </button>
+        <button class="menu-btn" id="vk-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 19h4.7c1.1 0 2-.9 2-2v-4.3c0-.5-.2-1-.6-1.4l-7.3-7.3c-.4-.4-.9-.6-1.4-.6H6c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8z"></path>
+                <path d="M10 10l4 4m-4 0l4-4"></path>
+            </svg>
+            ВКонтакте
+        </button>
+    </div>
+    
+    <div class="contact-form" id="contact-form">
+        <h3>Оставить заявку</h3>
+        <input type="text" id="user-name" placeholder="Ваше имя" required>
+        <input type="tel" id="user-phone" placeholder="Ваш телефон" required>
+        <textarea id="user-message" placeholder="Ваше сообщение"></textarea>
+        <div class="privacy-checkbox">
+            <input type="checkbox" id="privacy" required>
+            <label for="privacy">Я согласен с политикой конфиденциальности</label>
+        </div>
+        <button id="submit-form">Отправить</button>
+    </div>
+    
+    <div class="social-button" id="telegram-button">
+        <a href="https://t.me/" class="social-btn telegram" target="_blank">Написать в Telegram</a>
+    </div>
+    
+    <div class="social-button" id="whatsapp-button">
+        <a href="https://wa.me/" class="social-btn whatsapp" target="_blank">Написать в WhatsApp</a>
+    </div>
+    
+    <div class="social-button" id="vk-button">
+        <a href="https://vk.com/" class="social-btn vk" target="_blank">Написать ВКонтакте</a>
+    </div>
+    
+    <div class="notification" id="notification">
+        Форма успешно отправлена! Мы свяжемся с вами в ближайшее время.
+    </div>
+
+    <!--  КОНЕЦ                      -----------------------------------------------------                  ФОРМА-->
+      
+    <div id="preloader">
+        <img src="skidka.png" alt="Preloader Image">
+    </div>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container">
+                <a href="#" class="header__logo">
+                   <p class="gradient">Мебель <br>честная цена </p>
+                </a>
+                <div class="header__menu menu">
+                    <div class="menu__icon   ">
+                        <span></span>
+                    </div>
+                    <nav class="menu__body">
+                        <ul class="menu__list">
+                            <li><a data-goto=".page__section_1" href="#" class="menu__link">Главная</a></li>
+                            <li><a data-goto=".page__section_5" href="#" class="menu__link">Товары</a></li>
+                            <li><a data-goto=".page__section_8" href="#" class="menu__link">Товары по акции </a></li>
+                            <li><a data-goto=".page__section_3" href="#" class="menu__link">Доставка</a></li>
+                            <li><a data-goto=".page__section_4" href="#" class="menu__link">Оплата, рассрочка, кредит</a></li>
+                            <!-- <li><a data-goto=".page__section_6" href="#" class="menu__link">Спикерские и ссылки в чаты</a></li>
+                            <li><a data-goto=".page__section_7" href="#" class="menu__link"> Расписание собраний</a></li>
+                            <li><a data-goto=".page__section_2" href="#" class="menu__link">Ёжик - только сегодня</a></li>
+                            
+                              <li><a data-goto=".page__section_9" href="#" class="menu__link">Инструменты на каждый день</a></li>
+                                <li><a data-goto=".page__section_10" href="#" class="menu__link">Для собрания АН</a></li> -->
+<!-- 
+                            <li><a href="tel:+791111111111" id="table" class="menu__link icons"><i class='fa fa-phone' style='color:#e6e935;'></i></a></li> -->
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <main class="page">
+             <section class="page__section page__section_1">
+
+          <h2 class="page__sub-title">Огромный ассортимент товаров</h2>
+     
+
+      <div class="box" style="max-width: 900px; margin: 0 auto;">
+            <div class="video-container">
+                        <video loop autoplay muted>
+                          <source src="output(crop-video.com).mp4" type="video/mp4" />
+                          Ваш браузер не поддерживает тег video.
+                        </video>
+                        <div class="overlay"></div>
+                      </div>
+                      <br>
+                      
+                      <br>
+          <div class="kupon"><br>
+            <p>Наш адрес: <br><br>
+            город Пермь<br><br> ул. Пермская 17<br><br>тел: +7(999)999-89-89   <br>
+          
+            
+          
+          </p><br>
+
+              <img src="КУПОН.jpg" alt="">
+              
+          </div> <br>
+ 
+
+<div class="map-container">
+  <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A78081b81b33e3f7a22d8d2f147584b1d4375909e21be8cd22208c5f0d68a89db&width=100%&height=250px&lang=ru_RU&scroll=true"></script>
+</div>
+      </div><br> 
+
+
+   </section>
+
+
+     
+
+            <section class="page__section page__section_3">
+             <div>Доставка:</div> <br> 
+            <p>Доставка по Перми в центральные районы:<br> 
+600 рублей<br> 
+<br> 
+Доставка по Перми в отдаленные районы <br> 
+600 руб + наценка за расстояние<br> <br> 
+
+ 
+
+Доставка по Пермскому краю<br> 
+Рассчитывается индивидуально по тарифам перевозчика<br> 
+<br> 
+ 
+
+При наличии товара на складе доставка осуществляется на следующий день,кроме воскресения</p><br><br>
+Дополнительные услуги при доставке:<br><br>
+1. Подъем мебели на этаж<br>
+Диван Еврокнижка, книжка, модульная кухня, кровать + матрас,прихожая  -  от 150 руб за этаж<br>
+
+Угловой диван на ППУ, шкаф-купе, комод в сборе,шкаф - от 200 руб за этаж<br>
+
+Матрас, комод  - от 100 руб за этаж<br>
+
+Модульный шкаф,угловой диван на металокаркассе  - от 250 руб за этаж<br>
+
+*при наличии грузового лифта берется сумма за 2 этажа независимо от этажа подъема<br>
+<br>
+2. Сборка корпусной мебели <br>
+10%-12% от стоимости мебели<br><br>
+            
+              
+                
+            </section>
+<!-- ==================================================================СПИКЕРСКИЕ ==================================== -->
+   
+
+
+
+<!-- ПоДкооооооооооооооооммммммммммммммииииииииииииииииииииииииииииииитееееетЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫ -->
+
+                   <section class="page__section page__section_5">
+         <h2 class="page__sub-title">Товары</h2>
+  <select id="committeeSelect">
+    <option value="">Все </option>
+    <option value="PSO">Диваны</option>
+    <option value="RSO">Столы</option>
+      <option value="MDA">Кровати</option>
+    <option value="PBU">Кресла  </option>
+  
+    <option value="LITKOM">Шкафы</option>
+  </select>
+  <br><br>
+
+  <div id="allCommittees">
+    <h1 class="PSO committee-info">
+    
+      Диваны
+      <p><br>
+<div class="product-container">
+  <!-- Карточка 1 -->
+  <div class="product-card" data-images='[
+    "7521970392.jpg",
+    "7521970392.jpg",
+    "7521970392.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="7521970392.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="7521970392.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="7521970392.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+    <!-- Карточка 1 -->
+  <div class="product-card" data-images='[
+    "7521970392.jpg",
+    "7521970392.jpg",
+    "7521970392.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="7521970392.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="7521970392.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="7521970392.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+
+      <!-- Карточка 1 -->
+  <div class="product-card" data-images='[
+    "7521970392.jpg",
+    "7521970392.jpg",
+    "7521970392.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="7521970392.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="7521970392.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="7521970392.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+
+    <!-- Карточка 2 -->
+    <!-- Карточка 2 -->
+ <div class="product-card" data-images='[
+    "7521970392.jpg",
+    "7521970392.jpg",
+    "7521970392.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="7521970392.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="7521970392.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="7521970392.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+  <!-- Третья карточка -->
+ <div class="product-card" data-images='[
+    "7521970392.jpg",
+    "7521970392.jpg",
+    "7521970392.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="7521970392.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="7521970392.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="7521970392.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+  <!-- Третья карточка -->
+ <div class="product-card" data-images='[
+    "7521970392.jpg",
+    "7521970392.jpg",
+    "7521970392.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="7521970392.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="7521970392.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="7521970392.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+</div>
+      <br>
+    </h1>
+
+   
+
+   
+    <h1 class="MDA committee-info">  
+    Кровати 
+      <p><br>
+<div class="product-container">
+  <!-- Карточка 1 -->
+  <div class="product-card" data-images='[
+    "Кровать.jpg",
+    "Кровать.jpg",
+    "Кровать.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="Кровать.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="Кровать.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="Кровать.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+  <!-- Карточка 2 -->
+  <div class="product-card" data-images='[
+    "Кровать.jpg",
+    "Кровать.jpg",
+    "Кровать.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="Кровать.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="Кровать.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="Кровать.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+
+    <!-- Карточка 2 -->
+  <div class="product-card" data-images='[
+    "Кровать.jpg",
+    "Кровать.jpg",
+    "Кровать.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="Кровать.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="Кровать.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="Кровать.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+
+
+    <!-- Карточка 2 -->
+  <div class="product-card" data-images='[
+    "Кровать.jpg",
+    "Кровать.jpg",
+    "Кровать.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="Кровать.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="Кровать.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="Кровать.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+
+
+  <!-- Третья карточка -->
+   <div class="product-card" data-images='[
+    "Кровать.jpg",
+    "Кровать.jpg",
+    "Кровать.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="Кровать.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="Кровать.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="Кровать.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+  <!-- Третья карточка -->
+     <div class="product-card" data-images='[
+    "Кровать.jpg",
+    "Кровать.jpg",
+    "Кровать.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="Кровать.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="Кровать.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="Кровать.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+</div></p>   <br>
+    </h1>
+
+ 
+
+    <h1 class="RSO committee-info">  
+    Столы 
+      <p><br>
+<div class="product-container">
+  <!-- Карточка 1 -->
+  <div class="product-card" data-images='[
+    "ctol.jpg",
+    "ctol.jpg",
+    "ctol.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="ctol.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="ctol.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="ctol.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+  <!-- Карточка 2 -->
+    <div class="product-card" data-images='[
+    "ctol.jpg",
+    "ctol.jpg",
+    "ctol.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="ctol.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="ctol.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="ctol.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div> 
+   <!-- Карточка 2 -->
+
+    <div class="product-card" data-images='[
+    "ctol.jpg",
+    "ctol.jpg",
+    "ctol.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="ctol.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="ctol.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="ctol.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+  <!-- Карточка 2 -->
+   <div class="product-card" data-images='[
+    "ctol.jpg",
+    "ctol.jpg",
+    "ctol.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="ctol.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="ctol.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="ctol.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+  <!-- Третья карточка -->
+ <div class="product-card" data-images='[
+    "ctol.jpg",
+    "ctol.jpg",
+    "ctol.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="ctol.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="ctol.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="ctol.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+  <!-- Третья карточка -->
+      <div class="product-card" data-images='[
+    "ctol.jpg",
+    "ctol.jpg",
+    "ctol.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="ctol.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="ctol.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="ctol.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+</div></p>   <br>
+    </h1>
+
+    <h1 class="PBU committee-info">
+      Кресла 
+      <p><br>
+<div class="product-container">
+  <!-- Карточка 1 -->
+  <div class="product-card" data-images='[
+    "Кресло.jpg",
+    "Кресло.jpg",
+    "Кресло.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="Кресло.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="Кресло.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="Кресло.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+
+   <!-- Карточка 1 -->
+  <div class="product-card" data-images='[
+    "Кресло.jpg",
+    "Кресло.jpg",
+    "Кресло.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="Кресло.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="Кресло.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="Кресло.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+   <!-- Карточка 1 -->
+  <div class="product-card" data-images='[
+    "Кресло.jpg",
+    "Кресло.jpg",
+    "Кресло.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="Кресло.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="Кресло.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="Кресло.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+  <!-- Карточка 2 -->
+  <!-- Карточка 2 -->
+     <div class="product-card" data-images='[
+    "Кресло.jpg",
+    "Кресло.jpg",
+    "Кресло.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="Кресло.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="Кресло.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="Кресло.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+  <!-- Карточка 2 -->
+ <div class="product-card" data-images='[
+    "Кресло.jpg",
+    "Кресло.jpg",
+    "Кресло.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="Кресло.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="Кресло.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="Кресло.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+
+  
+  <!-- Третья карточка -->
+   <div class="product-card" data-images='[
+    "Кресло.jpg",
+    "Кресло.jpg",
+    "Кресло.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="Кресло.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="Кресло.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="Кресло.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+</div>
+      <br>
+    </h1>
+
+    <h1 class="LITKOM committee-info"> 
+      Шкафы
+      <p><br>
+       
+<div class="product-container">
+  <!-- Карточка 1 -->
+  <div class="product-card" data-images='[
+    "шкаф.jpg",
+    "шкаф.jpg",
+    "шкаф.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="шкаф.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="шкаф.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="шкаф.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+  <!-- Карточка 2 -->
+
+    <!-- Карточка 1 -->
+  <div class="product-card" data-images='[
+    "шкаф.jpg",
+    "шкаф.jpg",
+    "шкаф.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="шкаф.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="шкаф.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="шкаф.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+  <!-- Карточка 2 -->
+
+    <!-- Карточка 1 -->
+  <div class="product-card" data-images='[
+    "шкаф.jpg",
+    "шкаф.jpg",
+    "шкаф.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="шкаф.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="шкаф.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="шкаф.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+  <!-- Карточка 2 -->
+   <div class="product-card" data-images='[
+    "шкаф.jpg",
+    "шкаф.jpg",
+    "шкаф.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="шкаф.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="шкаф.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="шкаф.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+  <!-- Третья карточка -->
+ <div class="product-card" data-images='[
+    "шкаф.jpg",
+    "шкаф.jpg",
+    "шкаф.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="шкаф.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="шкаф.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="шкаф.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+  <!-- Третья карточка -->
+ <div class="product-card" data-images='[
+    "шкаф.jpg",
+    "шкаф.jpg",
+    "шкаф.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="шкаф.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="шкаф.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="шкаф.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+</div><br>
+      </p>
+      <br>
+    </h1>
+  </div>
+
+  
+                
+            </section>
+<!-- ОПЛАТАААААААААААААААААААААААААААААААААААААААаааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааа -->
+            <section class="page__section page__section_4">
+                <!-- <h2 class="page__sub-title">Оплата, рассрочка,кредит</h2> -->
+      
+<div class="block" onclick="toggleBlock(this)">
+  <div class="block-header">
+    <div class="icon">
+      <img style="height: 60px; display: block; margin: 0 auto;" src="spb.png" alt="Левый значок" />
+    </div>
+    <div class="title">Cистема быстрых платежей</div>
+    <img src="https://img.icons8.com/ios/24/000000/close-window.png" class="close-icon" onclick="event.stopPropagation(); toggleRotate(this)" />
+  </div>
+  <div class="info">
+    <p>Оплата через СБП осуществляется как из личного кабинета, так и со страницы подтверждения заказа. Просто выберите способ оплаты "Оплата СБП или картой" и нажав кнопку "Получить QR-код", наведите камеру на QR-код и подтвердите операцию.</p>
+  </div>
+</div>
+
+<div class="block" onclick="toggleBlock(this)">
+  <div class="block-header">
+    <div class="icon">
+      <img style="height: 60px; display: block; margin: 0 auto;" src="Наличные1.png" alt="Левый значок" />
+    </div>
+    <div class="title">Оплата наличными</div>
+    <img src="https://img.icons8.com/ios/24/000000/close-window.png" class="close-icon" onclick="event.stopPropagation(); toggleRotate(this)" />
+  </div>
+  <div class="info">
+    <p>Оплата наличными при получении - это самый простой и удобный способ расчета. Данный вид оплаты доступен для всех заказов и не требует никакой дополнительной информации. Просто оплатите заказ наличными при получении и наслаждайтесь покупкой.</p>
+  </div>
+</div>
+
+<div class="block" onclick="toggleBlock(this)">
+  <div class="block-header">
+    <div class="icon">
+      <img style="height: 60px; display: block; margin: 0 auto;" src="КАрта.png" alt="Левый значок" />
+    </div>
+    <div class="title">Оплатa банковской картой</div>
+    <img src="https://img.icons8.com/ios/24/000000/close-window.png" class="close-icon" onclick="event.stopPropagation(); toggleRotate(this)" />
+  </div>
+  <div class="info">
+    <p>Для оплаты картами Visa, Mastercard, Мир и Халва, вам необходимо выбрать опцию "Оплата СБП или картой" на странице оформления заказа. Далее для подтверждения заказа нажмите "Оплатить картой" и вы будете перенаправлены на эквайринг-страницу банка. Так же это можно сделать в личном кабинете. Если списание прошло успешно, вам поступит подтверждение на электронную почту.
+<br><br>
+Возможна оплата в рассрочку картой Халва. <br>
+
+Основные преимущества:<br>
+<br>
+Мгновенная оплата<br>
+Переплата - 0%<br>
+Первоначальный взнос - 0%</p>
+  </div>
+</div>
+
+<div class="block" onclick="toggleBlock(this)">
+  <div class="block-header">
+    <div class="icon">
+      <img style="height: 60px; display: block; margin: 0 auto;" src="Пей-Picsart-BackgroundRemover (1)-Picsart-BackgroundRemover.png" alt="Левый значок" />
+    </div>
+    <div class="title">Оплата яндекс Пей</div>
+    <img src="https://img.icons8.com/ios/24/000000/close-window.png" class="close-icon" onclick="event.stopPropagation(); toggleRotate(this)" />
+  </div>
+  <div class="info">
+    <p>Сервис для быстрой оплаты. Надёжно хранит данные банковских карт и заполняет их за пару кликов. Это намного быстрее и удобнее, чем вводить данные вручную при каждой оплате. Оплата через Яндекс Пэй осуществляется как из личного кабинета, так и со страницы подтверждения заказа. Необходимо выбрать способ оплаты "Яндекс Пэй" и нажав кнопку "Оплатить с Пэй" вы перейдете на страницу оплаты.</p>
+  </div>
+</div>
+
+<div class="block" onclick="toggleBlock(this)">
+  <div class="block-header">
+    <div class="icon">
+      <img style="height: 60px; display: block; margin: 0 auto;" src="orig (1).png" alt="Левый значок" />
+    </div>
+    <div class="title">Яндекс сплит</div>
+    <img src="https://img.icons8.com/ios/24/000000/close-window.png" class="close-icon" onclick="event.stopPropagation(); toggleRotate(this)" />
+  </div>
+  <div class="info">
+    <p>Сплит делит оплату на части — платежи можно вносить постепенно. Это не кредит и не рассрочка, поэтому у него нет анкет, проверки кредитной истории и скрытых условий. А покупку вы получите после первого платежа — то есть сразу. Выбирайте обычный Сплит или Супер Сплит. <br>
+
+Обычный Сплит <br>
+сейчас только 1/4 цены, остальное позже <br>
+покупка сразу ваша <br>
+всё удобно и быстро, никаких анкет <br>
+сплит на 2 месяца бесплатный, на 4 и 6 — с небольшой доплатой <br>
+можно покупать товары до 150 000 ₽ <br>
+Супер Сплит* <br>
+лимит до 1 млн ₽ <br>
+срок платежей — до 24 месяцев <br>
+можно не вносить первый платёж <br>
+даже если вы уже что-то сплитанули, у вас всё равно есть возможность взять Супер Сплит — а не ждать, когда закроются предыдущие сплиты <br>
+улучшить Сплит можно в приложении Яндекс Пэй <br>
+Чтобы оплатить заказ по частям, необходимо при оформлении заказа указать способ оплаты "Яндекс Сплит". Далее на странице подтверждения выберите пункт "Оплатить". <br>
+
+Не надо никуда ходить или ждать курьера, так же не требуется ждать решение от банка. Это так же просто, как оплатить картой! <br>
+
+Сервис Яндекс Сплит предоставляется ООО «Яндекс Пэй» (ОГРН 1187746900428, 115035, г. Москва, ул. Садовническая, д. 82, стр. 2, пом. 5В26). Оформление заказа осуществляется в соответствии с договором поручения. Не является публичной офертой, есть ограничения на использование сервиса. <br>
+
+*Супер Сплит - Кредит от АО «Яндекс Банк». Полная стоимость кредита (займа): 14,357% до 54.000% годовых, процентная ставка: от 10% годовых до 54% годовых. Лимит кредитования — от 5000 рублей до 1 000 000 рублей. Банк имеет право отказать в предоставлении кредита. Супер Сплит — кредит от АО «Яндекс Банк». Предложение об оплате без переплат ограничено и действует при оплате товаров отмеченных сервисом Яндекс Пэй с 15.02.24 — 31.12.25. Условия супер Сплита могут меняться, Количество участвующих товаров ограничено. Подробнее: https://yandex.ru/legal/nooverpayments. <br>
+
+ОЦЕНИВАЙТЕ СВОИ ФИНАНСОВЫЕ ВОЗМОЖНОСТИ И РИСКИ.</p>
+  </div>
+</div>
+
+<div class="block" onclick="toggleBlock(this)">
+  <div class="block-header">
+    <div class="icon">
+      <img style="height: 60px; display: block; margin: 0 auto; text-align: left;" src="  Тиньков.png" alt="Левый значок" />
+    </div>
+    <div class="title">Рассрочка,  кредит</div>
+    <img src="https://img.icons8.com/ios/24/000000/close-window.png" class="close-icon" onclick="event.stopPropagation(); toggleRotate(this)" />
+  </div>
+  <div class="info">
+    <p>Оформление рассрочки <br>
+При оформлении заказа выберите способ оплаты "Рассрочка". <br>
+На странице подтверждения заказа нажмите "Оформить в рассрочку". <br>
+Далее выберите условия оформления рассрочки. <br>
+Максимальный срок рассрочки - 6 месяцев. <br>
+Заполнение анкеты займет не более 2-х минут. Не надо никуда ходить или ждать курьера. Решение Вы узнаете сразу, после заполнения анкеты. <br>
+Обратите внимание, данный вид платежа доступен только для граждан России от 18 до 65 лет с действующим паспортом и постоянным доходом.
+<br> <br>
+Оформление кредита
+При оформлении заказа выберите способ оплаты "Кредит". <br>
+Далее выберите условия оформления крдита. <br>
+Кредит доступен от 3-х до 36 месяцев <br>
+Итоговая процентная ставка зависит от вашей кредитной истории и условий банка Тинькофф. <br>
+Обратите внимание, данный вид платежа доступен только для граждан России от 18 до 65 лет с действующим паспортом и постоянным доходом. <br>
+Минимальная сумма кредита от 3000 руб
+<br>
+Возможна оплата в рассрочку картой Халва.
+<br>
+Основные преимущества: <br>
+Мгновенная оплата <br>
+Переплата - 0% <br>
+Первоначальный взнос - 0%</p>
+  </div>
+</div>
+                   
+            </section>
+
+
+               <section class="page__section page__section_8">
+
+                <!-- ==============================================ТОВАРЫ ПО АКЦИИ========================================================================= -->
+  <h2 class="page__sub-title">Товары по акции</h2>
+  <select id="committeeSelect2">
+    <option value="">Все </option>
+    <option value="PSO2">Диваны</option>
+    <option value="RSO2">Столы</option>
+      <option value="MDA2">Кровати</option>
+    <option value="PBU2">Кресла</option>
+  
+    <option value="LITKOM2">Шкафы</option>
+  </select>
+  <br><br>
+
+  <div id="allCommittees2">
+    <h1 class="PSO2 committee-info2">
+      
+      Диваны 
+      <p><br>
+<div class="product-container">
+  <!-- Карточка 1 -->
+  <div class="product-card" data-images='[
+    "акцияДиваны.jpg",
+    "акцияДиваны.jpg",
+    "акцияДиваны.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="акцияДиваны.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="акцияДиваны.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="акцияДиваны.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+    <!-- Карточка 1 -->
+  <div class="product-card" data-images='[
+    "акцияДиваны.jpg",
+    "акцияДиваны.jpg",
+    "акцияДиваны.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="акцияДиваны.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="акцияДиваны.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="акцияДиваны.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+    <!-- Карточка 1 -->
+  <div class="product-card" data-images='[
+    "акцияДиваны.jpg",
+    "акцияДиваны.jpg",
+    "акцияДиваны.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="акцияДиваны.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="акцияДиваны.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="акцияДиваны.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+  <!-- Карточка 2 -->
+    <div class="product-card" data-images='[
+    "акцияДиваны.jpg",
+    "акцияДиваны.jpg",
+    "акцияДиваны.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="акцияДиваны.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="акцияДиваны.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="акцияДиваны.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+  <!-- Третья карточка -->
+   <div class="product-card" data-images='[
+    "акцияДиваны.jpg",
+    "акцияДиваны.jpg",
+    "акцияДиваны.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="акцияДиваны.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="акцияДиваны.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="акцияДиваны.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+  <!-- Третья карточка -->
+    <div class="product-card" data-images='[
+    "акцияДиваны.jpg",
+    "акцияДиваны.jpg",
+    "акцияДиваны.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="акцияДиваны.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="акцияДиваны.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="акцияДиваны.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+      <br>
+    </h1>
+
+   
+
+    <h1 class="RSO2 committee-info2">  
+     Столы
+      <p><br>
+<div class="product-container">
+  <!-- Карточка 1 -->
+  <div class="product-card" data-images='[
+    "акцияСтол.jpg",
+    "акцияСтол.jpg",
+    "акцияСтол.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="акцияСтол.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="акцияСтол.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="акцияСтол.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+    <!-- Карточка 1 -->
+  <div class="product-card" data-images='[
+    "акцияСтол.jpg",
+    "акцияСтол.jpg",
+    "акцияСтол.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="акцияСтол.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="акцияСтол.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="акцияСтол.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+    <!-- Карточка 1 -->
+  <div class="product-card" data-images='[
+    "акцияСтол.jpg",
+    "акцияСтол.jpg",
+    "акцияСтол.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="акцияСтол.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="акцияСтол.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="акцияСтол.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+  <!-- Карточка 2 -->
+<div class="product-card" data-images='[
+    "акцияСтол.jpg",
+    "акцияСтол.jpg",
+    "акцияСтол.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="акцияСтол.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="акцияСтол.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="акцияСтол.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+  <!-- Третья карточка -->
+<div class="product-card" data-images='[
+    "акцияСтол.jpg",
+    "акцияСтол.jpg",
+    "акцияСтол.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="акцияСтол.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="акцияСтол.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="акцияСтол.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+  <!-- Третья карточка -->
+<div class="product-card" data-images='[
+    "акцияСтол.jpg",
+    "акцияСтол.jpg",
+    "акцияСтол.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="акцияСтол.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="акцияСтол.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="акцияСтол.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>  
+</div></p>   <br>
+    </h1>
+ 
+
+    <h1 class="MDA2 committee-info2">  
+      Кровати 
+      <p><br>
+<div class="product-container">
+  <!-- Карточка 1 -->
+  <div class="product-card" data-images='[
+    "кроватьАкция.jpg",
+    "кроватьАкция.jpg",
+    "кроватьАкция.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="кроватьАкция.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="кроватьАкция.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="кроватьАкция.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+    <!-- Карточка 1 -->
+  <div class="product-card" data-images='[
+    "кроватьАкция.jpg",
+    "кроватьАкция.jpg",
+    "кроватьАкция.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="кроватьАкция.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="кроватьАкция.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="кроватьАкция.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+  <!-- Карточка 2 -->
+     <!-- Карточка 1 -->
+  <div class="product-card" data-images='[
+    "кроватьАкция.jpg",
+    "кроватьАкция.jpg",
+    "кроватьАкция.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="кроватьАкция.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="кроватьАкция.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="кроватьАкция.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+  <!-- Карточка 2 -->
+  <!-- Карточка 2 -->
+ <div class="product-card" data-images='[
+    "кроватьАкция.jpg",
+    "кроватьАкция.jpg",
+    "кроватьАкция.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="кроватьАкция.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="кроватьАкция.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="кроватьАкция.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+  <!-- Третья карточка -->
+ <div class="product-card" data-images='[
+    "кроватьАкция.jpg",
+    "кроватьАкция.jpg",
+    "кроватьАкция.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="кроватьАкция.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="кроватьАкция.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="кроватьАкция.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+  <!-- Третья карточка -->
+ <div class="product-card" data-images='[
+    "кроватьАкция.jpg",
+    "кроватьАкция.jpg",
+    "кроватьАкция.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="кроватьАкция.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="кроватьАкция.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="кроватьАкция.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+</div></p>   <br>
+    </h1>
+
+    <h1 class="PBU2 committee-info2">
+      Кресла 
+      <p><br>
+<div class="product-container">
+  <!-- Карточка 1 -->
+  <div class="product-card" data-images='[
+    "КреслоАкция.jpg",
+    "КреслоАкция.jpg",
+    "КреслоАкция.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="КреслоАкция.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="КреслоАкция.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="КреслоАкция.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+    <!-- Карточка 1 -->
+  <div class="product-card" data-images='[
+    "КреслоАкция.jpg",
+    "КреслоАкция.jpg",
+    "КреслоАкция.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="КреслоАкция.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="КреслоАкция.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="КреслоАкция.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+  <!-- Карточка 2 -->
+     <!-- Карточка 1 -->
+  <div class="product-card" data-images='[
+    "КреслоАкция.jpg",
+    "КреслоАкция.jpg",
+    "КреслоАкция.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="КреслоАкция.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="КреслоАкция.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="КреслоАкция.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+  <!-- Карточка 2 -->
+  <!-- Карточка 2 -->
+  <div class="product-card" data-images='[
+    "КреслоАкция.jpg",
+    "КреслоАкция.jpg",
+    "КреслоАкция.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="КреслоАкция.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="КреслоАкция.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="КреслоАкция.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+  <!-- Третья карточка -->
+  <div class="product-card" data-images='[
+    "КреслоАкция.jpg",
+    "КреслоАкция.jpg",
+    "КреслоАкция.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="КреслоАкция.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="КреслоАкция.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="КреслоАкция.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+  <!-- Третья карточка -->
+   <div class="product-card" data-images='[
+    "КреслоАкция.jpg",
+    "КреслоАкция.jpg",
+    "КреслоАкция.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="КреслоАкция.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="КреслоАкция.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="КреслоАкция.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+</div>
+      <br>
+    </h1>
+
+    <h1 class="LITKOM2 committee-info2"> 
+      Шкафы
+      <p><br>
+       
+<div class="product-container">
+  <!-- Карточка 1 -->
+  <div class="product-card" data-images='[
+    "ШкафАкция.jpg",
+    "ШкафАкция.jpg",
+    "ШкафАкция.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="ШкафАкция.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="ШкафАкция.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="ШкафАкция.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+    <!-- Карточка 1 -->
+  <div class="product-card" data-images='[
+    "ШкафАкция.jpg",
+    "ШкафАкция.jpg",
+    "ШкафАкция.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="ШкафАкция.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="ШкафАкция.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="ШкафАкция.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+    <!-- Карточка 1 -->
+  <div class="product-card" data-images='[
+    "ШкафАкция.jpg",
+    "ШкафАкция.jpg",
+    "ШкафАкция.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="ШкафАкция.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="ШкафАкция.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="ШкафАкция.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+  <!-- Карточка 2 -->
+  <div class="product-card" data-images='[
+    "ШкафАкция.jpg",
+    "ШкафАкция.jpg",
+    "ШкафАкция.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="ШкафАкция.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="ШкафАкция.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="ШкафАкция.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+  <!-- Третья карточка -->
+  <div class="product-card" data-images='[
+    "ШкафАкция.jpg",
+    "ШкафАкция.jpg",
+    "ШкафАкция.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="ШкафАкция.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="ШкафАкция.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="ШкафАкция.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+  <!-- Третья карточка -->
+  <div class="product-card" data-images='[
+    "ШкафАкция.jpg",
+    "ШкафАкция.jpg",
+    "ШкафАкция.jpg"
+  ]'>
+    <div class="card-slider">
+      <div class="slides">
+        <div class="slide"><img src="ШкафАкция.jpg" alt="Фото 1" /></div>
+        <div class="slide"><img src="ШкафАкция.jpg" alt="Фото 2" /></div>
+        <div class="slide"><img src="ШкафАкция.jpg" alt="Фото 3" /></div>
+      </div>
+      <div class="nav-arrow nav-prev">❮</div>
+      <div class="nav-arrow nav-next">❯</div>
+    </div>
+    <div class="card-info">
+      <h3 class="product-title">Товар 1</h3>
+      <p class="product-price">₽1000</p>
+      <p class="product-desc">Это пример описания товара. Чем больше текста, тем больше места занимает. Здесь можно добавить подробное описание продукта, чтобы покупатель узнал больше о товаре.</p>
+    </div>
+  </div>
+</div><br>
+      </p>
+      <br>
+    </h1>
+  </div>
+
+  
+</section>
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const selectElement2 = document.getElementById('committeeSelect2');
+    const sections2 = document.querySelectorAll('.committee-info2');
+
+    selectElement2.addEventListener('change', function() {
+      const selectedValue2 = this.value;
+
+      if (selectedValue2 === '') {
+        // Показать все блоки
+      sections2.forEach(section2 => {
+          section2.style.display = '';
+        });
+      } else {
+        // Скрыть все блоки
+        sections2.forEach(section2 => {
+          // Проверяем есть ли у секции класс, соответствующий выбраному значению
+          if (section2.classList.contains(selectedValue2)) {
+            section2.style.display = '';
+          } else {
+            section2.style.display = 'none';
+          }
+        });
+      }
+    });
+  });
+</script>
+<!-- ======================================================================================================================= -->
+  
+
+<!-- -=--------------------------------------------------------------------------------------------------------------------- -->
+                  <section class="page__section page__section_9">
+      
+            </section>
+
+<!-- щщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщщ -->
+
+                  <section class="page__section page__section_10">
+        <style>
+
+  /* Сделайте блоки текста адаптивными */
+.committee-info1, .committee-info2 {
+  margin-top: 15px;
+  max-width: 100%; /* чтобы блоки не выходили за границы родителя */
+  box-sizing: border-box; /* чтобы padding не превышал ширину */
+  word-wrap: break-word; /* перенос слов при необходимости */
+}
+
+/* Для более плавной адаптации на маленьких экранах */
+@media (max-width: 600px) {
+  .committee-info1, .committee-info2 {
+    padding: 0 10px; /* добавим внутренние отступы для читаемости */
+  }
+}
+</style>
+
+<!-- Ваш существующий контент -->
+
+  </h1>
+
+  <!-- остальные секции пропущены для краткости, вставляйте их по аналогии -->
+</div>
+
+
+</div>
+
+<script>
+  // Обработка для первой секции
+  const select1 = document.getElementById('committeeSelect1');
+  const sections1 = document.querySelectorAll('.committee-info1');
+  const range1 = document.getElementById('fontSizeRange1');
+  const sizeDisplay1 = document.getElementById('fontSizeValue1');
+
+  select1.addEventListener('change', () => {
+    const val = select1.value;
+    sections1.forEach(sec => {
+      if (val === '' || sec.classList.contains(val)) {
+        sec.style.display = '';
+      } else {
+        sec.style.display = 'none';
+      }
+    });
+  });
+
+  // Обработка для второй секции
+  const select2 = document.getElementById('committeeSelect2');
+  const sections2 = document.querySelectorAll('.committee-info2');
+  const range2 = document.getElementById('fontSizeRange2');
+  const sizeDisplay2 = document.getElementById('fontSizeValue2');
+
+  select2.addEventListener('change', () => {
+    const val = select2.value;
+    sections2.forEach(sec => {
+      if (val === '' || sec.classList.contains(val)) {
+        sec.style.display = '';
+      } else {
+        sec.style.display = 'none';
+      }
+    });
+  });
+
+  // Обработка для первого бегунка
+  range1.addEventListener('input', () => {
+    const size = range1.value;
+    sizeDisplay1.textContent = size;
+    document.querySelectorAll('.committee-info1').forEach(el => {
+      el.style.fontSize = size + 'px';
+    });
+  });
+  // Изначально устанавливаем размер
+  document.querySelectorAll('.committee-info1').forEach(el => {
+    el.style.fontSize = range1.value + 'px';
+  });
+
+  // Обработка для второго бегунка
+  range2.addEventListener('input', () => {
+    const size = range2.value;
+    sizeDisplay2.textContent = size;
+    document.querySelectorAll('.committee-info2').forEach(el => {
+      el.style.fontSize = size + 'px';
+    });
+  });
+  // Изначально устанавливаем размер
+  document.querySelectorAll('.committee-info2').forEach(el => {
+    el.style.fontSize = range2.value + 'px';
+  });
+</script>
+            </section>
+            
+            <!-- ------------------------------------------------------------------------------------------- -->
+            
+         
+           
+       
+        </main>
+    </div>
+
+    <script  src="index.js">
+   </script>
+   <script>
+    // свайпп экранаааааааруками перематывааааааааатььььььььььььььььььььььььь
+    const slider = document.querySelector('.slider');
+    let startX = 0;
+    let currentX = 0;
+    let isDragging = false;
+    let initialTranslateX = 0; // Добавляем для хранения начального смещения
+  
+    // Получаем текущее смещение слайдера
+    const getTranslateX = () => {
+      const transform = getComputedStyle(slider).transform;
+      if (transform && transform !== 'none') {
+        const matrix = transform.match(/matrix\((.+)\)/);
+        if (matrix) {
+          return parseFloat(matrix[1].split(', ')[4]);
+        }
+      }
+      return 0;
+    };
+  
+    slider.addEventListener('touchstart', (e) => {
+      isDragging = true;
+      startX = e.touches[0].clientX;
+      initialTranslateX = getTranslateX(); // Сохраняем начальное смещение
+      slider.style.transition = 'none'; // Отключаем анимацию во время перетаскивания
+    });
+  
+    slider.addEventListener('touchmove', (e) => {
+      if (!isDragging) return;
+      currentX = e.touches[0].clientX;
+      const deltaX = currentX - startX;
+      slider.style.transform = `translateX(${initialTranslateX + deltaX}px)`;
+    });
+  
+    slider.addEventListener('touchend', () => {
+      if (!isDragging) return;
+      isDragging = false;
+      const deltaX = currentX - startX;
+      const slideWidth = slider.querySelector('.slide').offsetWidth;
+      const threshold = slideWidth / 4; // Порог для переключения слайда
+  
+      let newTranslateX = initialTranslateX;
+  
+      if (deltaX > threshold) {
+        // Свайп вправо
+        newTranslateX = initialTranslateX + slideWidth; // Переходим к предыдущему слайду
+      } else if (deltaX < -threshold) {
+        // Свайп влево
+        newTranslateX = initialTranslateX - slideWidth; // Переходим к следующему слайду
+      }
+  
+      // Ограничиваем смещение, чтобы не выходить за пределы слайдов
+      const maxTranslateX = 0;
+      const minTranslateX = -(slider.children.length - 1) * slideWidth;
+      newTranslateX = Math.max(minTranslateX, Math.min(maxTranslateX, newTranslateX));
+  
+      slider.style.transition = 'transform 0.3s ease-in-out'; // Включаем анимацию обратно
+      slider.style.transform = `translateX(${newTranslateX}px)`;
+  
+      // Обновляем активную точку (если у вас есть точки)
+      const dots = document.querySelectorAll('.dot');
+      const newIndex = Math.round(-newTranslateX / slideWidth);
+      dots.forEach((dot, index) => {
+        dot.classList.remove('active');
+        if (index === newIndex) {
+          dot.classList.add('active');
+        }
+      });
+    });
+  
+    // Добавляем обработчики для кнопок навигации (если они у вас есть)
+    const prevButton = document.querySelector('.prev-button');
+    const nextButton = document.querySelector('.next-button');
+    const slideWidth = slider.querySelector('.slide').offsetWidth;
+  
+    if (prevButton) {
+      prevButton.addEventListener('click', () => {
+        const currentTranslateX = getTranslateX();
+        const newTranslateX = Math.min(0, currentTranslateX + slideWidth);
+        slider.style.transition = 'transform 0.3s ease-in-out';
+        slider.style.transform = `translateX(${newTranslateX}px)`;
+        // Обновляем активную точку
+        const dots = document.querySelectorAll('.dot');
+        const newIndex = Math.round(-newTranslateX / slideWidth);
+        dots.forEach((dot, index) => {
+          dot.classList.remove('active');
+          if (index === newIndex) {
+            dot.classList.add('active');
+          }
+        });
+      });
+    }
+  
+    if (nextButton) {
+      nextButton.addEventListener('click', () => {
+        const currentTranslateX = getTranslateX();
+        const maxTranslateX = -(slider.children.length - 1) * slideWidth;
+        const newTranslateX = Math.max(maxTranslateX, currentTranslateX - slideWidth);
+        slider.style.transition = 'transform 0.3s ease-in-out';
+        slider.style.transform = `translateX(${newTranslateX}px)`;
+        // Обновляем активную точку
+        const dots = document.querySelectorAll('.dot');
+        const newIndex = Math.round(-newTranslateX / slideWidth);
+        dots.forEach((dot, index) => {
+          dot.classList.remove('active');
+          if (index === newIndex) {
+            dot.classList.add('active');
+          }
+        });
+      });
+    }
+  
+    // Добавляем обработчики для точек навигации
+    const dots = document.querySelectorAll('.dot');
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        const newTranslateX = -index * slideWidth;
+        slider.style.transition = 'transform 0.3s ease-in-out';
+        slider.style.transform = `translateX(${newTranslateX}px)`;
+        // Обновляем активную точку
+        dots.forEach((d, i) => {
+          d.classList.remove('active');
+          if (i === index) {
+            d.classList.add('active');
+          }
+        });
+      });
+    });
+  
+  </script>
+
+    <!-- Модальное окно -->
+  <div id="modal">
+    <div id="close">×</div>
+    <div class="modal-arrow" id="modal-prev">❮</div>
+    <img id="modal-img" src="" alt="Большое фото" />
+    <div class="modal-arrow" id="modal-next">❯</div>
+  </div>
+
+  <script>
+  const cards = document.querySelectorAll('.product-card');
+  const modal = document.getElementById('modal');
+  const modalImg = document.getElementById('modal-img');
+
+  let currentImages = [];
+  let currentIndex = 0;
+
+  // Обработка клика по картинкам внутри карточек
+  cards.forEach(card => {
+    const dataImages = JSON.parse(card.getAttribute('data-images'));
+    const imgs = card.querySelectorAll('.slides img');
+
+    imgs.forEach((img, index) => {
+      img.onclick = () => {
+        console.log('Клик по изображению:', index);
+        currentImages = dataImages;
+        currentIndex = index;
+        showImage();
+        modal.style.display = 'flex';
+
+        // Обновляем слайдер внутри карточки
+        const slidesContainer = card.querySelector('.slides');
+        // сбрасываем слайдер на выбранный индекс
+        slidesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+      };
+    });
+
+    const prevBtn = card.querySelector('.nav-prev');
+    const nextBtn = card.querySelector('.nav-next');
+    const slidesContainer = card.querySelector('.slides');
+
+    let slideIndex = 0;
+
+    function updateSlider() {
+      slidesContainer.style.transform = `translateX(-${slideIndex * 100}%)`;
+    }
+
+    prevBtn.onclick = () => {
+      slideIndex = (slideIndex - 1 + dataImages.length) % dataImages.length;
+      updateSlider();
+    };
+
+    nextBtn.onclick = () => {
+      slideIndex = (slideIndex + 1) % dataImages.length;
+      updateSlider();
+    };
+
+    // свайп внутри карточки
+    let startX = 0;
+    let isDown = false;
+
+    const slider = card.querySelector('.card-slider');
+
+    slider.addEventListener('touchstart', (e) => {
+      isDown = true;
+      startX = e.touches[0].clientX;
+    });
+    slider.addEventListener('touchend', (e) => {
+      if (!isDown) return;
+      isDown = false;
+      const endX = e.changedTouches[0].clientX;
+      const deltaX = startX - endX;
+      if (deltaX > 50) {
+        slideIndex = (slideIndex + 1) % dataImages.length;
+        updateSlider();
+      } else if (deltaX < -50) {
+        slideIndex = (slideIndex - 1 + dataImages.length) % dataImages.length;
+        updateSlider();
+      }
+    });
+  });
+
+  // Функция отображения изображения в модалке
+  function showImage() {
+    if (currentImages.length > 0) {
+      console.log('Показываем изображение:', currentImages[currentIndex]);
+      modalImg.src = currentImages[currentIndex];
+    }
+  }
+
+  // Закрытие модалки
+  document.getElementById('close').onclick = () => {
+    modal.style.display = 'none';
+  };
+  window.onclick = (e) => {
+    if (e.target === modal) modal.style.display = 'none';
+  };
+
+  // Навигация в модалке
+  document.getElementById('modal-prev').onclick = () => {
+    currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+    showImage();
+  };
+  document.getElementById('modal-next').onclick = () => {
+    currentIndex = (currentIndex + 1) % currentImages.length;
+    showImage();
+  };
+
+  // Обработка клавиш
+  document.addEventListener('keydown', (e) => {
+    if (modal.style.display === 'flex') {
+      if (e.key === 'ArrowLeft') {
+        currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+        showImage();
+      } else if (e.key === 'ArrowRight') {
+        currentIndex = (currentIndex + 1) % currentImages.length;
+        showImage();
+      } else if (e.key === 'Escape') {
+        modal.style.display = 'none';
+      }
+    }
+  });
+
+
+
+// Оплатаааааааааааааааааа
+document.querySelectorAll('.label').forEach(label => {
+  label.addEventListener('click', () => {
+    const details = label.nextElementSibling;
+    details.classList.toggle('expanded');
+  });
+});
+
+// для оплатыыыыыыыыыыыыыыыыыы
+
+ // Функция для открытия одного блока и закрытия остальных
+  function toggleBlock(clickedBlock) {
+    const blocks = document.querySelectorAll('.block');
+    blocks.forEach(block => {
+      const info = block.querySelector('.info');
+      const closeIcon = block.querySelector('.close-icon');
+
+      if (block === clickedBlock) {
+        info.classList.toggle('show');
+        toggleRotate(closeIcon);
+      } else {
+        info.classList.remove('show');
+        closeIcon.classList.remove('rotate');
+      }
+    });
+  }
+
+  // Вращение крестика
+  function toggleRotate(icon) {
+    icon.classList.toggle('rotate');
+  }
+
+  // Обработка клика по крестикам
+  document.querySelectorAll('.close-icon').forEach(icon => {
+    icon.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleRotate(icon);
+    });
+  });
+
+  
+  </script>
+  <script src="form.js"></script>
+</body>
+</html>
